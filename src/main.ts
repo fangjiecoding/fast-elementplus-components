@@ -6,9 +6,9 @@ import 'normalize.css'
 import App from './App.vue'
 import router from './router'
 import * as ElementPlusIconsVue from '@element-plus/icons-vue'
-import mMenu from '../lib/menu'
-import '../lib/menu/style.css'
-// import mUI from './components'
+
+import mUI from 'elementplus-components-ts'
+import 'elementplus-components-ts/style.css'
 const app = createApp(App)
 for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
   app.component(key, component)
@@ -16,6 +16,6 @@ for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
 app.use(createPinia())
 app.use(router)
 app.use(ElementPlus)
-app.use(mMenu)
+app.use(mUI)
 
 app.mount('#app')

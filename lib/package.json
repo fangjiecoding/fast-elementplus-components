@@ -1,0 +1,19 @@
+{
+  "name": "elementplus-components-ts",
+  "version": "1.0.3",
+  "main": "index.umd.js",
+  "module": "index.mjs.js",
+  "types": "index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./index.mjs"
+    }
+  },
+  "keywords": [
+    "m-components",
+    "ts",
+    "element-plus",
+    "二次封装",
+    "vue-components"
+  ]
+}

@@ -11,6 +11,9 @@ dependencies:
   element-plus:
     specifier: ^2.6.1
     version: 2.6.1(vue@3.4.21)
+  elementplus-components-ts:
+    specifier: ^1.0.3
+    version: 1.0.3
   fs-extra:
     specifier: ^11.2.0
     version: 11.2.0
@@ -1645,6 +1648,10 @@ packages:
       vue: 3.4.21(typescript@5.4.2)
     transitivePeerDependencies:
       - '@vue/composition-api'
+    dev: false
+
+  /elementplus-components-ts@1.0.3:
+    resolution: {integrity: sha512-fxKhi9msYWzyJQCzkDccwuipupFVuAhVOvMpbCIT/EhzSa+AImWSNvXgMPie6lb19+/ehCrMcnibC14k272Exg==}
     dev: false
 
   /entities@4.5.0:

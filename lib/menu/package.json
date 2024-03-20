@@ -2,6 +2,6 @@
   "name": "menu",
   "version": "0.0.0",
   "main": "index.umd.js",
-  "module": "index.es.js",
+  "module": "index.mjs.js",
   "style": "style.css"
 }

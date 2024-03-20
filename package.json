@@ -9,11 +9,14 @@
     "build-only": "vite build",
     "type-check": "vue-tsc --build --force",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
-    "format": "prettier --write src/"
+    "format": "prettier --write src/",
+    "build:components": "node ./command/build.js",
+    "lib": "npm run build:components"
   },
   "dependencies": {
     "@element-plus/icons-vue": "^2.3.1",
     "element-plus": "^2.6.1",
+    "elementplus-components-ts": "^1.0.3",
     "fs-extra": "^11.2.0",
     "normalize.css": "^8.0.1",
     "pinia": "^2.1.7",

@@ -40,6 +40,7 @@ const buildAll = async () => {
       }
     })
   )
+  createIndexDts()
 }
 
 const buildSingle = async (name) => {
@@ -72,6 +73,21 @@ const createPackageJson = (name) => {
 
   fsExtra.outputFile(path.resolve(outputDir, `${name}/package.json`), fileStr, 'utf-8')
 }
+const createIndexDts = (name) => {
+  const fileStr = `
+  import { App } from 'vue'
+  declare const _default: {
+  install: (app: App) => void
+}
+  export default _default
+`
+
+  fsExtra.outputFile(
+    path.resolve(outputDir, name ? `${name}/index.d.ts` : './index.d.ts'),
+    fileStr,
+    'utf-8'
+  )
+}
 
 const buildLib = async () => {
   await buildAll()
@@ -89,6 +105,8 @@ const buildLib = async () => {
 
     // 生成组件的 package.json 文件
     createPackageJson(name)
+    // 生成组件的 index.d.ts 文件
+    createIndexDts(name)
   }
 }
 
