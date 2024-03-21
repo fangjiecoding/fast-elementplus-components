@@ -1,0 +1,1 @@
+import{_ as t,o,c as s,p as c,g as a,a as _}from"./index-BmqyOdS5.js";const d={},n=e=>(c("data-v-aa5d6110"),e=e(),a(),e),p={class:"container"},r=n(()=>_("h1",null,"vue3 + typescript + vite5 + element-plus二次封装组件",-1)),i=[r];function l(e,h){return o(),s("div",p,i)}const f=t(d,[["render",l],["__scopeId","data-v-aa5d6110"]]);export{f as default};

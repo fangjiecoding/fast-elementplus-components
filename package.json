@@ -1,6 +1,6 @@
 {
-  "name": "m-components",
-  "version": "0.0.0",
+  "name": "fast-elementplus-components",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "vite",
