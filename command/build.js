@@ -66,9 +66,14 @@ const createPackageJson = (name) => {
   const fileStr = `{
   "name": "${name}",
   "version": "0.0.0",
-  "main": "index.umd.js",
-  "module": "index.es.js",
-  "style": "style.css"
+  "exports": {
+    ".": {
+      "import": "./index.mjs",
+      "require": "./index.umd.js",
+      "types": "./index.d.ts"
+    },
+    "./*": "./*"
+  }
 }`
 
   fsExtra.outputFile(path.resolve(outputDir, `${name}/package.json`), fileStr, 'utf-8')
