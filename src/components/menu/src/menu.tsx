@@ -1,11 +1,9 @@
-import { useAttrs } from 'vue'
-import { defineComponent } from 'vue'
 import type { PropType } from 'vue'
 import type { MenuItem } from './types'
 import * as Icons from '@element-plus/icons-vue'
 import './styles/index.scss'
 
-export default defineComponent({
+export default {
   props: {
     // 导航菜单的数据
     data: {
@@ -43,7 +41,7 @@ export default defineComponent({
       default: 'children'
     }
   },
-  setup(props) {
+  setup(props, context) {
     // 封装一个渲染无限层级菜单的方法
     // 函数会返回一段jsx的代码
     const renderMenu = (data: any[]) => {
@@ -78,18 +76,18 @@ export default defineComponent({
         )
       })
     }
-    const attrs = useAttrs()
+
     return () => {
       return (
         <el-menu
           class="menu-icon-svg"
           default-active={props.defaultActive}
           router={props.router}
-          {...attrs}
+          {...context.attrs}
         >
           {renderMenu(props.data)}
         </el-menu>
       )
     }
   }
-})
+}

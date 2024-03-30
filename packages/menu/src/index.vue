@@ -12,7 +12,7 @@
       </el-menu-item>
       <el-sub-menu v-if="item[children] && item[children].length" :index="item[index]">
         <template #title>
-          <component v-if="item[icon]" :is="`${item[icon]}`""></component>
+          <component v-if="item[icon]" :is="`${item[icon]}`"></component>
           <span>{{ item[name] }}</span>
         </template>
         <el-menu-item v-for="(item1, index1) in item[children]" :key="index1" :index="item1.index">

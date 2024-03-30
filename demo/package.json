@@ -1,16 +1,25 @@
 {
-  "name": "elementplus-components-ts",
-  "version": "1.0.3",
-  "main": "index.umd.js",
-  "module": "index.mjs.js",
-  "types": "index.d.ts",
+  "name": "fast-elementplus-components",
+  "version": "1.0.0",
   "exports": {
     ".": {
-      "import": "./index.mjs"
-    }
+      "import": "./index.mjs",
+      "require": "./index.umd.js",
+      "types": "./index.d.ts"
+    },
+    "./menu": {
+      "import": "./menu/index.mjs",
+      "require": "./menu/index.umd.js",
+      "types": "./menu/index.d.ts"
+    },
+    "./menu/style.css": {
+      "import": "./menu/style.css",
+      "require": "./menu/style.css"
+    },
+    "./*": "./*"
   },
   "keywords": [
-    "m-components",
+    "fast-elementplus-components",
     "ts",
     "element-plus",
     "二次封装",
