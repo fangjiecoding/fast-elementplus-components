@@ -2,6 +2,14 @@
   "name": "fast-elementplus-components",
   "version": "1.0.0",
   "private": true,
+  "exports": {
+    ".": {
+      "import": "./index.ts"
+    },
+    "./menu": {
+      "import": "./src/components/menu/index.ts"
+    }
+  },
   "scripts": {
     "dev": "vite",
     "build": "run-p \"build-only {@}\" --",
