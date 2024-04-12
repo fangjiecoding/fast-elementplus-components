@@ -24,7 +24,7 @@
   "dependencies": {
     "@element-plus/icons-vue": "^2.3.1",
     "element-plus": "^2.6.1",
-    "fast-elementplus-components": "^1.0.0",
+    "fast-elementplus-components": "^1.0.2",
     "fs-extra": "^11.2.0",
     "normalize.css": "^8.0.1",
     "pinia": "^2.1.7",
